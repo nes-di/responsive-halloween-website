@@ -64,16 +64,7 @@ img {
     height: auto;
 }
 
-/*==================== LAYOUT ====================*/
-.container {
-    max-width: 968px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
-.grid {
-    display: grid;
-}
+/*==================== REUSABLE CSS CLASSES ====================*/
 .section {
     padding: 4.5rem 0 2rem;
 }
@@ -83,6 +74,16 @@ img {
     margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
 }
 
 /*==================== HEADER & NAV ====================*/
@@ -170,7 +171,13 @@ img {
     left: 0;
 }
 
-/* Bouton Ghost */
+/* Change background header */
+.scroll-header {
+    background: var(--body-color);
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+}
+
+/*==================== BUTTONS ====================*/
 .button {
     display: inline-block;
     background-color: var(--first-color);
@@ -179,6 +186,10 @@ img {
     border-radius: .5rem;
     font-weight: var(--font-medium);
     transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
 }
 
 .button--ghost {
@@ -191,6 +202,26 @@ img {
 .button--ghost:hover {
     background-color: var(--first-color);
     border: 2px solid transparent;
+}
+
+.button--link {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.button__icon {
+    font-size: 1.25rem;
+    transition: .3s;
+}
+
+.button__icon:hover {
+    transform: translateX(.25rem);
 }
 
 /*==================== HOME ====================*/
@@ -269,40 +300,6 @@ img {
     align-items: center;
 }
 
-.button--link {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-}
-
-.button--flex {
-    display: inline-flex;
-    align-items: center;
-    column-gap: .5rem;
-}
-
-.button__icon {
-    font-size: 1.25rem;
-    transition: .3s;
-}
-
-.button__icon:hover {
-    transform: translateX(.25rem);
-}
-
-/* Version Desktop : passage sur deux colonnes */
-@media screen and (min-width: 767px) {
-    .home__content {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        padding: 7rem 0 2rem;
-    }
-
-    .home__img {
-        height: 350px;
-        transform: translateY(0);
-    }
-}
-
 /*==================== CATEGORY ====================*/
 .category__container {
     grid-template-columns: repeat(2, 1fr);
@@ -335,10 +332,21 @@ img {
     transform: translateY(-.5rem);
 }
 
-/* Alignement desktop (3 cartes sur la même ligne) */
-@media screen and (min-width: 767px) {
-    .category__container {
-        grid-template-columns: repeat(3, 200px);
-        column-gap: 3rem;
-    }
+/*==================== ABOUT ====================*/
+.about__container {
+    row-gap: 2rem;
+}
+
+.about__data {
+    text-align: center;
+}
+
+.about__description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.about__img {
+    width: 200px;
+    justify-self: center;
 }
