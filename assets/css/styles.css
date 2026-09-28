@@ -74,6 +74,16 @@ img {
 .grid {
     display: grid;
 }
+.section {
+    padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 /*==================== HEADER & NAV ====================*/
 .header {
@@ -290,5 +300,45 @@ img {
     .home__img {
         height: 350px;
         transform: translateY(0);
+    }
+}
+
+/*==================== CATEGORY ====================*/
+.category__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.category__data {
+    text-align: center;
+}
+
+.category__img {
+    width: 120px;
+    margin-bottom: .75rem;
+    transition: .3s;
+}
+
+.category__title {
+    margin-bottom: .25rem;
+    color: var(--title-color);
+}
+
+.category__description {
+    font-size: var(--small-font-size);
+    padding: 0 1rem;
+}
+
+.category__data:hover .category__img {
+    transform: translateY(-.5rem);
+}
+
+/* Alignement desktop (3 cartes sur la même ligne) */
+@media screen and (min-width: 767px) {
+    .category__container {
+        grid-template-columns: repeat(3, 200px);
+        column-gap: 3rem;
     }
 }
