@@ -71,6 +71,10 @@ img {
     margin-right: 1.5rem;
 }
 
+.grid {
+    display: grid;
+}
+
 /*==================== HEADER & NAV ====================*/
 .header {
     width: 100%;
@@ -177,4 +181,114 @@ img {
 .button--ghost:hover {
     background-color: var(--first-color);
     border: 2px solid transparent;
+}
+
+/*==================== HOME ====================*/
+.home {
+    padding: 3.5rem 0 2rem;
+}
+
+.home__content {
+    row-gap: 1rem;
+}
+
+.home__group {
+    display: grid;
+    position: relative;
+    padding-top: 2rem;
+    justify-items: center;
+}
+
+.home__img {
+    height: 250px;
+    transform: translateY(-2rem);
+}
+
+.home__indicator {
+    width: 8rem;
+    height: 8rem;
+    background: var(--first-color);
+    border-radius: 50%;
+    filter: blur(40px);
+    position: absolute;
+    top: 6rem;
+    left: calc(50% - 4rem);
+    opacity: .5;
+}
+
+.home__details-img {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
+
+.home__details-title {
+    display: block;
+    font-size: var(--small-font-size);
+    text-align: right;
+    color: var(--title-color);
+}
+
+.home__details-subtitle {
+    font-size: .75rem;
+    color: var(--text-color);
+}
+
+.home__subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    line-height: 109%;
+    margin-bottom: 1rem;
+    color: var(--title-color);
+}
+
+.home__description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.home__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button--link {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.button__icon {
+    font-size: 1.25rem;
+    transition: .3s;
+}
+
+.button__icon:hover {
+    transform: translateX(.25rem);
+}
+
+/* Version Desktop : passage sur deux colonnes */
+@media screen and (min-width: 767px) {
+    .home__content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 7rem 0 2rem;
+    }
+
+    .home__img {
+        height: 350px;
+        transform: translateY(0);
+    }
 }
