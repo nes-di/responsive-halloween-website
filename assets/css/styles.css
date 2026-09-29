@@ -415,3 +415,29 @@ img {
 .trick__icon {
     color: #fff;
 }
+
+/*==================== DISCOUNT ====================*/
+.discount__container {
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 2.5rem 0 1.5rem;
+    row-gap: 1.25rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.discount__data {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.discount__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--title-color);
+}
+
+.discount__img {
+    width: 200px;
+}
