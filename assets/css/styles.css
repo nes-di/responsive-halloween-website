@@ -350,3 +350,68 @@ img {
     width: 200px;
     justify-self: center;
 }
+
+/*==================== TRICK OR TREAT ====================*/
+.trick__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.trick__content {
+    position: relative;
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.trick__content:hover {
+    transform: translateY(-.5rem);
+}
+
+.trick__img {
+    width: 90px;
+    transition: .3s;
+}
+
+.trick__subtitle,
+.trick__price {
+    display: block;
+}
+
+.trick__subtitle {
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.trick__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    margin-bottom: .5rem;
+}
+
+.trick__price {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.trick__button {
+    font-size: 1.25rem;
+    padding: .5rem .75rem;
+    border-radius: .5rem 0 .5rem 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.trick__icon {
+    color: #fff;
+}
